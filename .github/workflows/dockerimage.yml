@@ -13,4 +13,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag docker.pkg.github.com/xfalcox/speedtest-cli/speedtest-cli:latest
     - name: Push the Docker image
-      run: docker login docker.pkg.github.com -u xfalcox -p ${{ secrets.token }} && docker push docker.pkg.github.com/xfalcox/speedtest-cli/speedtest-cli:latest
+      run: docker login ghcr.io -u xfalcox -p ${{ secrets.token }} && docker push ghcr.io/xfalcox/speedtest-cli/speedtest-cli:latest
